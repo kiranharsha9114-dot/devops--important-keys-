@@ -1,0 +1,7 @@
+post {
+        always {
+            mail to: 'kiranharsha9114@gmail.com',
+            subject: 'Pipeline Status',
+            body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} \n build ${env.BUILD_NUMBER} \n More info at : ${env.BUILD_URL}"
+        }
+    }
